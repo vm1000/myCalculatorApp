@@ -14,6 +14,8 @@
 		7F535257225F337300A4A7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F535255225F337300A4A7C5 /* LaunchScreen.storyboard */; };
 		7F535262225F337400A4A7C5 /* myCalculatorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F535261225F337400A4A7C5 /* myCalculatorAppTests.swift */; };
 		7F53526D225F337400A4A7C5 /* myCalculatorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F53526C225F337400A4A7C5 /* myCalculatorAppUITests.swift */; };
+		7F53527C225F677700A4A7C5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F53527B225F677700A4A7C5 /* AVFoundation.framework */; };
+		7F53527E225F682800A4A7C5 /* tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F53527D225F682800A4A7C5 /* tap.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		7F535268225F337400A4A7C5 /* myCalculatorAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myCalculatorAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F53526C225F337400A4A7C5 /* myCalculatorAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCalculatorAppUITests.swift; sourceTree = "<group>"; };
 		7F53526E225F337400A4A7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F53527B225F677700A4A7C5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		7F53527D225F682800A4A7C5 /* tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tap.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F53527C225F677700A4A7C5 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,7 @@
 				7F535260225F337400A4A7C5 /* myCalculatorAppTests */,
 				7F53526B225F337400A4A7C5 /* myCalculatorAppUITests */,
 				7F53524A225F337200A4A7C5 /* Products */,
+				7F53527A225F677700A4A7C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +109,7 @@
 				7F535253225F337300A4A7C5 /* Assets.xcassets */,
 				7F535255225F337300A4A7C5 /* LaunchScreen.storyboard */,
 				7F535258225F337300A4A7C5 /* Info.plist */,
+				7F53527D225F682800A4A7C5 /* tap.wav */,
 			);
 			path = myCalculatorApp;
 			sourceTree = "<group>";
@@ -123,6 +130,14 @@
 				7F53526E225F337400A4A7C5 /* Info.plist */,
 			);
 			path = myCalculatorAppUITests;
+			sourceTree = "<group>";
+		};
+		7F53527A225F677700A4A7C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F53527B225F677700A4A7C5 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F53527E225F682800A4A7C5 /* tap.wav in Resources */,
 				7F535257225F337300A4A7C5 /* LaunchScreen.storyboard in Resources */,
 				7F535254225F337300A4A7C5 /* Assets.xcassets in Resources */,
 				7F535252225F337200A4A7C5 /* Main.storyboard in Resources */,
