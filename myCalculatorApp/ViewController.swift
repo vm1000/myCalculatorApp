@@ -9,8 +9,6 @@
 import UIKit
 import AVFoundation
 
-
-
 class ViewController: UIViewController, AVAudioPlayerDelegate {
 
     var player: AVAudioPlayer = AVAudioPlayer()
@@ -20,8 +18,9 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     }
     
     
+    @IBOutlet var buttons: [UIButton]!
     
-    
+
     
     let plus = 10
     let minus = 11
@@ -70,27 +69,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         }
     }
         
-        
         num1 = 0
         num2 = 0
         operand = plus
         theNumber = String(answer)
+        
+        
+        
         printNumber()
         
         answer = 0.0
         theNumber = "0"
     }
     
+    
     @IBAction func setOperand(sender : UIButton){
-        if sender.tag >= 10 && sender.tag <= 13 {
             operand = sender.tag
             saveNum1()
-        }
-        if sender.tag == -2{
-            theNumber = "0"
-            printNumber()
-        }
     }
+    
+    
+    @IBAction func clearOperation(_ sender: UIButton) {
+        theNumber = "0"
+        printNumber()
+    }
+
     
     
     func saveNum1(){
@@ -98,13 +101,6 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         theNumber = "0"
         printNumber()
     }
-    
-    
-    
-    
-    
-    
-    var musicEffect = AVAudioPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,28 +113,31 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             //ERROR
         }
         
+        for i in buttons {
+            
+            i.imageView?.contentMode = .scaleAspectFit
+        }
+        
         printNumber()
     }
-
-    
-//    @IBAction func playSound (_ sender: Any){
-//        musicEffect.play()
-//    }
-    
     
     
     
     func printNumber(){
-        lblText.text = theNumber
+        
+        let newNumber = theNumber.replacingOccurrences(of: ".0", with: " ")
+        lblText.text = newNumber
+        
+
     }
     
     
     
     @IBAction func pressNum(sender : UIButton) {
-        if sender.tag >= 0 && sender.tag <= 9 {
+        
+            theNumber = ""
             theNumber += String(sender.tag)
             printNumber()
-        }
     }
 
 }
