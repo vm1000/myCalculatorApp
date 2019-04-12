@@ -13,7 +13,6 @@ import AVFoundation
 
 class ViewController: UIViewController, AVAudioPlayerDelegate {
 
-    
     var player: AVAudioPlayer = AVAudioPlayer()
     
     @IBAction func Play(_ sender: Any){
@@ -22,19 +21,21 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     
     
     
-    let PLUS = 10
-    let MINUS = 11
-    let MULTIPLY = 12
-    let DIVIDE = 13
+    
+    
+    let plus = 10
+    let minus = 11
+    let multiply = 12
+    let divide = 13
     
     
     
     @IBOutlet var lblText : UILabel!
     
     
-    var num1 : NSInteger = 0
-    var num2 : NSInteger = 0
-    var operand : NSInteger = 0
+    var num1 : Int = 0
+    var num2 : Int = 0
+    var operand : Int = 0
     var answer : Double = 0.0
     
     
@@ -44,16 +45,16 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBAction func calculate(sender : UIButton){
         num2 = Int(theNumber)!
         
-        if operand == PLUS{
+        if operand == plus{
             answer = Double(num1 + num2)
         }
-        if operand == MINUS {
+        if operand == minus {
             answer = Double(num1 - num2)
         }
-        if operand == MULTIPLY {
+        if operand == multiply {
             answer = Double(num1 * num2)
         }
-        if operand == DIVIDE {
+        if operand == divide {
             
             if num2 == 0 {
                 let alert = UIAlertController(title: "Error", message: "Cant divide by zero", preferredStyle: .alert)
@@ -67,11 +68,12 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             } else{
             answer = Double(num1) / Double(num2)
         }
-        }
+    }
+        
         
         num1 = 0
         num2 = 0
-        operand = PLUS
+        operand = plus
         theNumber = String(answer)
         printNumber()
         
@@ -115,16 +117,13 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
             //ERROR
         }
         
-        
         printNumber()
     }
+
     
-    
-    
-    
-    @IBAction func playSound (_ sender: Any){
-        musicEffect.play()
-    }
+//    @IBAction func playSound (_ sender: Any){
+//        musicEffect.play()
+//    }
     
     
     

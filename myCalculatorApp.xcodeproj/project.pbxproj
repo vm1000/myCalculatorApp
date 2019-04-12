@@ -10,12 +10,13 @@
 		7F53524D225F337200A4A7C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F53524C225F337200A4A7C5 /* AppDelegate.swift */; };
 		7F53524F225F337200A4A7C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F53524E225F337200A4A7C5 /* ViewController.swift */; };
 		7F535252225F337200A4A7C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F535250225F337200A4A7C5 /* Main.storyboard */; };
-		7F535254225F337300A4A7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F535253225F337300A4A7C5 /* Assets.xcassets */; };
 		7F535257225F337300A4A7C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F535255225F337300A4A7C5 /* LaunchScreen.storyboard */; };
 		7F535262225F337400A4A7C5 /* myCalculatorAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F535261225F337400A4A7C5 /* myCalculatorAppTests.swift */; };
 		7F53526D225F337400A4A7C5 /* myCalculatorAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F53526C225F337400A4A7C5 /* myCalculatorAppUITests.swift */; };
 		7F53527C225F677700A4A7C5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F53527B225F677700A4A7C5 /* AVFoundation.framework */; };
 		7F53527E225F682800A4A7C5 /* tap.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F53527D225F682800A4A7C5 /* tap.wav */; };
+		7F535280225F844B00A4A7C5 /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7F53527F225F844B00A4A7C5 /* Minecraft.ttf */; };
+		7F535282225F846D00A4A7C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F535281225F846D00A4A7C5 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		7F53524C225F337200A4A7C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F53524E225F337200A4A7C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7F535251225F337200A4A7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7F535253225F337300A4A7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F535256225F337300A4A7C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F535258225F337300A4A7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F53525D225F337400A4A7C5 /* myCalculatorAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myCalculatorAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +51,8 @@
 		7F53526E225F337400A4A7C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F53527B225F677700A4A7C5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		7F53527D225F682800A4A7C5 /* tap.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tap.wav; sourceTree = "<group>"; };
+		7F53527F225F844B00A4A7C5 /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		7F535281225F846D00A4A7C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +108,11 @@
 				7F53524C225F337200A4A7C5 /* AppDelegate.swift */,
 				7F53524E225F337200A4A7C5 /* ViewController.swift */,
 				7F535250225F337200A4A7C5 /* Main.storyboard */,
-				7F535253225F337300A4A7C5 /* Assets.xcassets */,
 				7F535255225F337300A4A7C5 /* LaunchScreen.storyboard */,
+				7F53527F225F844B00A4A7C5 /* Minecraft.ttf */,
 				7F535258225F337300A4A7C5 /* Info.plist */,
 				7F53527D225F682800A4A7C5 /* tap.wav */,
+				7F535281225F846D00A4A7C5 /* Assets.xcassets */,
 			);
 			path = myCalculatorApp;
 			sourceTree = "<group>";
@@ -246,8 +249,9 @@
 			files = (
 				7F53527E225F682800A4A7C5 /* tap.wav in Resources */,
 				7F535257225F337300A4A7C5 /* LaunchScreen.storyboard in Resources */,
-				7F535254225F337300A4A7C5 /* Assets.xcassets in Resources */,
+				7F535280225F844B00A4A7C5 /* Minecraft.ttf in Resources */,
 				7F535252225F337200A4A7C5 /* Main.storyboard in Resources */,
+				7F535282225F846D00A4A7C5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
