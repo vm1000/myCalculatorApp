@@ -53,7 +53,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="315" height="80"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xs-Bg-sHM">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Xs-Bg-sHM" userLabel="00">
                                         <rect key="frame" x="5" y="5" width="290" height="70"/>
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="40"/>
@@ -106,6 +106,7 @@
                                                         <state key="normal" image="7"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="ptI-Og-G3A"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="pEB-8Y-E0H"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="u6G-6Q-WPJ"/>
                                                         </connections>
                                                     </button>
@@ -114,6 +115,7 @@
                                                         <state key="normal" image="8"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="sb1-B2-D79"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="ljj-r9-mCI"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="9Xe-rf-7UR"/>
                                                         </connections>
                                                     </button>
@@ -123,6 +125,7 @@
                                                         <state key="normal" image="9"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="L1y-Cb-Vcu"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="F7X-Ec-uVE"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="x8a-vg-V1u"/>
                                                         </connections>
                                                     </button>
@@ -137,6 +140,7 @@
                                                         <state key="normal" image="4"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="78j-tF-HyI"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="WQA-Wx-pfv"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="9Xb-eT-aXi"/>
                                                         </connections>
                                                     </button>
@@ -146,6 +150,7 @@
                                                         <state key="normal" image="5"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="4Vd-BQ-PpH"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="vGE-ZK-hpb"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="raR-Ac-TDi"/>
                                                         </connections>
                                                     </button>
@@ -155,6 +160,7 @@
                                                         <state key="normal" image="6"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="550-kB-Pkl"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="9MK-Vv-WPI"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="fuf-qO-8gv"/>
                                                         </connections>
                                                     </button>
@@ -169,6 +175,7 @@
                                                         <state key="normal" image="1"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="47a-mI-fwy"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="8WB-Er-wJ2"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="9zS-fR-kly"/>
                                                         </connections>
                                                     </button>
@@ -177,6 +184,7 @@
                                                         <state key="normal" image="2"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="AUQ-BQ-C2g"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="pNk-S1-ahU"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="j0S-Ss-ws7"/>
                                                         </connections>
                                                     </button>
@@ -185,6 +193,7 @@
                                                         <state key="normal" image="3"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="8lr-eU-dhs"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="sJ5-55-Keu"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="XBz-Ml-V6z"/>
                                                         </connections>
                                                     </button>
@@ -207,6 +216,7 @@
                                                         <state key="normal" image="0"/>
                                                         <connections>
                                                             <action selector="Play:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="Y4P-qd-CxN"/>
+                                                            <action selector="buttonPressedWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="vZh-S6-xH5"/>
                                                             <action selector="pressNumWithSender:" destination="NHz-Y5-PXz" eventType="touchUpInside" id="oFu-Xc-VnP"/>
                                                         </connections>
                                                     </button>
