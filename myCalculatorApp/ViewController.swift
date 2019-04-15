@@ -15,48 +15,65 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet var buttons: [UIButton]!
     
     @IBAction func play(_ sender: Any) {
-        player?.play()
+        audioPlayer?.play()
     }
     
-    @IBAction func pressNum(sender: UIButton) {
-        if answer == "0" {
-            answer = String(sender.tag)
+    @IBAction func selectedNumber(_ sender: UIButton) {
+        if label.text == "0" {
+            runningNumber = String(sender.tag)
         } else {
-            answer += String(sender.tag)
+            runningNumber += String(sender.tag)
         }
-        
-        printNumber()
+
+        label.text = runningNumber
     }
     
-    @IBAction func calculate() {
-        switch operand {
-        case .add:
-            answer = String(num1 + num2)
-        case .divide:
-            answer = String(num1 - num2)
-        case .multiply:
-            answer = String(num1 * num2)
-        case .subtract:
-            if num2 == 0 {
-                answer = "Divided by 0"
-            } else {
-                answer = String(num1 / num2)
+    @IBAction func equals() {
+        let rightValue = Double(runningNumber)
+
+        if let lhs = leftValue, let rhs = rightValue {
+            var result = ""
+
+            switch operand {
+            case .add:
+                result = String(lhs + rhs)
+            case .subtract:
+                result = String(lhs - rhs)
+            case .multiply:
+                result = String(lhs * rhs)
+            case .divide:
+                if rhs != 0 {
+                    result = String(lhs / rhs)
+                }
             }
+
+            let formatter = NumberFormatter()
+            formatter.minimumIntegerDigits = 1
+            formatter.minimumFractionDigits = 0
+            formatter.maximumFractionDigits = 5
+
+            label.text = formatter.string(for: Double(result))
+            leftValue = Double(result)
+            runningNumber = ""
         }
     }
     
-    @IBAction func setOperand(sender: UIButton) {
-        operand = Operand(rawValue: sender.tag) ?? .add
-        saveNum1()
-        
+    @IBAction func setOperand(_ sender: UIButton) {
+        if leftValue == nil {
+            leftValue = Double(runningNumber)
+            runningNumber = ""
+        } else {
+            equals()
+        }
+
+        operand = Operand(rawValue: sender.tag)!
     }
     
-    @IBAction func clearOperation() {
-        num1 = 0
-        num2 = 0
-        answer = "0"
+    @IBAction func clear() {
+        leftValue = nil
+        runningNumber = ""
         
-        printNumber()
+        label.text = "0"
     }
     
     enum Operand: Int {
@@ -66,57 +83,25 @@ class ViewController: UIViewController, AVAudioPlayerDelegate {
         case divide = 13
     }
     
-    var player: AVAudioPlayer?
+    var audioPlayer: AVAudioPlayer? {
+        didSet {
+            audioPlayer?.prepareToPlay()
+        }
+    }
     
-    var num1 = 0.0 {
-        didSet {
-            print("Did save number 1: \(num1)")
-        }
-    }
-    var num2 = 0.0 {
-        didSet {
-            print("Did save number 2: \(num2)")
-        }
-    }
+    var leftValue: Double? = nil
+    var runningNumber = ""
     var operand: Operand = .add
-    var answer = "0" {
-        didSet {
-            print("Current answer: \(answer)")
-        }
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let resourcePath = Bundle.main.path(forResource: "tap", ofType: "wav") {
-            player = try? AVAudioPlayer.init(contentsOf: URL(fileURLWithPath: resourcePath))
+            try? audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: resourcePath))
         }
         
         for button in buttons {
             button.imageView?.contentMode = .scaleAspectFit
         }
-        
-        printNumber()
-    }
-    
-    func saveNum1() {
-        if let number = Double(answer) {
-            num1 = number
-        }
-        
-        printNumber()
-    }
-    
-    func saveNum2() {
-        if let number = Double(answer) {
-            num2 = number
-        }
-        
-        calculate()
-    }
-    
-    func printNumber() {
-        label.text = answer.replacingOccurrences(of: ".0", with: "")
     }
 }
-
